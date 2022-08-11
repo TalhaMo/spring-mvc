@@ -1,7 +1,15 @@
 package org.studyeasy.model;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
+
 public class User {
-private String name,gender,country,introduction,visitedCountry[];
+
+@Size(min =5,max=10)
+//@Email
+private String name;
+
+private String gender,country,introduction,visitedCountry[];
 	
 	public User() {
 		

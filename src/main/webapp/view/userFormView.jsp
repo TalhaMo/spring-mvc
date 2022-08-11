@@ -15,20 +15,23 @@
 <hr/>
 <form:form action="displayUserInfo" modelAttribute="user">
 name: 
-<form:input path="name"/>
+<form:input path="name" placeholder="enter name" required="true"/>
+<form:errors path="name" cssStyle="color:red" />
 <p>
 Gender: 
-<form:radiobuttons path="gender" items="${genderMap }"/>
+<form:radiobuttons path="gender" items="${genderMap }" required="true"/>
 </p>
 Country: <form:select path="country" items="${countryMap }"/>
 		<p/>
-		Introduction: <form:textarea path="introduction"/>
+		Introduction: <form:textarea path="introduction" required="true"/>
 		<p/>
 		Visited country: <form:checkbox path="visitedCountry" value="USA" label="united state"/>
 						 <form:checkbox path="visitedCountry" value="Germany" label="germany"/>
 						 <form:checkbox path="visitedCountry" value="France" label="france"/>
 						 <form:checkbox path="visitedCountry" value="Italy" label="italy"/>
 						 <p/>
+		Accept agreement: <form:checkbox path="" value="accept" required="true"/>
+		<p/>
 <input type="submit" value="submit"/>
 </form:form>
 
